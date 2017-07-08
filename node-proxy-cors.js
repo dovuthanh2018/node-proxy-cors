@@ -1,5 +1,5 @@
 /*
-    A NodeJS proxy to make CORS requests.
+    NodeJS reverse proxy to make requests with CORS headers.
         1. node node-proxy-cors
         2. Make a request to http://localhost:8080/?url=http://www.someapi.com
 */
