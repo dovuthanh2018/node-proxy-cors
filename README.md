@@ -1,6 +1,6 @@
 # NodeJS Proxy CORS
 
-NodeJS reverse proxy to make requests with CORS headers.
+A NodeJS reverse proxy to make requests with CORS headers.
 
 ```javascript
 $ node node-proxy-cors
