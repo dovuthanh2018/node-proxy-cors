@@ -3,11 +3,14 @@
         1. node node-proxy-cors
         2. Make a request to http://localhost:8080/?url=http://www.someapi.com
 */
-var express = require('express');
-var request = require('request');
+const express = require('express');
+const request = require('request');
 const path = require("path");
 require('dotenv').config();
-var app = express();
+const cors = require('cors');
+
+const app = express();
+app.use(cors());
 
 //enable CORS
 app.use(function(req, res, next) {
