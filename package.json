@@ -2,7 +2,7 @@
   "name": "node-proxy-cors",
   "version": "1.0.0",
   "description": "A NodeJS proxy to make CORS requests.",
-  "main": "node-proxy-cors.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

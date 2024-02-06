@@ -21,4 +21,5 @@ app.use('/', function(req, res) {
     req.pipe(request(url)).pipe(res);
 });
 
+console.log('starting')
 app.listen(8080);
