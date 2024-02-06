@@ -5,7 +5,7 @@
 */
 var express = require('express');
 var request = require('request');
-
+require('dotenv').config();
 var app = express();
 
 //enable CORS
@@ -21,5 +21,7 @@ app.use('/', function(req, res) {
     req.pipe(request(url)).pipe(res);
 });
 
+const port = process.env.PORT || 8000;
+
 console.log('starting')
-app.listen(8080);
+app.listen(port);
