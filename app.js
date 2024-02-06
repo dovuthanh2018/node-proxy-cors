@@ -5,6 +5,7 @@
 */
 var express = require('express');
 var request = require('request');
+const path = require("path");
 require('dotenv').config();
 var app = express();
 
@@ -18,7 +19,11 @@ app.use(function(req, res, next) {
 //proxy
 app.use('/', function(req, res) {
     var url = req.query.url;
-    req.pipe(request(url)).pipe(res);
+		if(url) {
+			req.pipe(request(url)).pipe(res);
+		}else{
+			res.sendFile(path.join(__dirname, 'public', 'index.html'));
+		}
 });
 
 const port = process.env.PORT || 8000;
